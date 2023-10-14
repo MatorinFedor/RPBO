@@ -22,6 +22,7 @@ public class Role {
     @Enumerated(EnumType.STRING)
     private ApplicationUserRole name;
 
+    @Transient
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "roles")
     private Set<ApplicationUser> users;
 }
